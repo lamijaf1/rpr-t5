@@ -3,31 +3,15 @@ package ba.unsa.etf.rpr.tutorijal05;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
+import javafx.scene.control.Label;
+
 
 
 public class Controller {
 
 
-    public Label unosBrojeva;
-    public Button jednakoBtn=new Button("=");
-    public Button plusBtn=new Button("+");
-    public Button minusBtn;
-    public Button putaBtn;
-    public Button tackaBtn;
-    public Button podjeljenoBt;
-    public Button procenatBtn;
-    public Button btn0;
-    public Button btn1;
-    public Button btn2;
-    public Button btn3;
-    public Button btn4;
-    public Button btn5;
-    public Button btn6;
-    public Button btn7;
-    public Button btn8;
-    public Button btn9;
+    public Label display;
+
 
 
  @FXML
@@ -36,10 +20,16 @@ public class Controller {
         tekst=new SimpleStringProperty("0");
     }
 
-    public void unos(ActionEvent actionEvent) {
-        System.out.println(unosBrojeva.getText());
-        unosBrojeva.setText(unosBrojeva.getText());
+    public void zeroClick(ActionEvent actionEvent) {
     }
-
-
+    public void oneClick(ActionEvent actionEvent ){
+    }
+    public void twoClick(ActionEvent actionEvent ){}
+    public void threeClick(ActionEvent actionEvent ){}
+    public void fourClick(ActionEvent actionEvent ){}
+    public void fiveClick(ActionEvent actionEvent ){}
+    public void sixClick(ActionEvent actionEvent ){}
+    public void sevenClick(ActionEvent actionEvent){}
+    public void eightClick(ActionEvent actionEvent ){}
+    public void nineClick(ActionEvent actionEvent ){}
 }
