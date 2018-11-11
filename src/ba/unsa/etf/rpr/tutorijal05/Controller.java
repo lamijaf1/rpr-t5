@@ -10,7 +10,7 @@ import javafx.scene.control.TextField;
 public class Controller {
 
 
-    public TextField unosBrojeva;
+    public Label unosBrojeva;
     public Button jednakoBtn=new Button("=");
     public Button plusBtn=new Button("+");
     public Button minusBtn;
