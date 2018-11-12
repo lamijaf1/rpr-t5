@@ -65,12 +65,26 @@ public class Controller {
         if(decimalni==false)tekst.set(tekst.get()+dotBtn.getText());
         decimalni=true;
     }
-    public void PlusBtn(ActionEvent actionEvent) {
+    public void plusBtn(ActionEvent actionEvent) {
+        prviBroj=tekst.get();
+        //prviBroj=tekst.get()+plusBtn.getText();
+        tekst.set("");
+    }
+    public void minusBtn(ActionEvent actionEvent) {
         prviBroj=tekst.get();
         tekst.set("");
     }
-    public void EqualsBtn(ActionEvent actionEvent) {
+    public void productBtn(ActionEvent actionEvent) {
+        prviBroj=tekst.get();
+        tekst.set("");
+    }
+    public void divideBtn(ActionEvent actionEvent) {
+        prviBroj=tekst.get();
+        tekst.set("");
+    }
+    public void equalsBtn(ActionEvent actionEvent) {
         drugiBroj=tekst.get();
+        //String drugiBroj = drugiBroj.substring(0, drugiBroj.length()-1);
         double br1=Double.parseDouble(prviBroj);
         System.out.println(prviBroj+ drugiBroj);
         double br2=Double.parseDouble((drugiBroj));
@@ -78,6 +92,17 @@ public class Controller {
         String broj=Double.toString(jednako);
         equalsBtn.setText(broj);
         tekst.set(broj);
+        /*  drugiBroj=tekst.get();
+        String broj=""
+        if(prviBroj.charAt(prviBroj.length()-1)=='+') {
+            prviBroj = prviBroj.substring(0, prviBroj.length() - 1);
+            double br1 = Double.parseDouble(prviBroj);
+            double br2 = Double.parseDouble((drugiBroj));
+            double jednako = br1 + br2;
+            broj = Double.toString(jednako);
+        }
+        equalsBtn.setText(broj);
+        tekst.set(broj);*/
     }
     public void percentBtn(ActionEvent actionEvent) {
         String posto=tekst.get();
