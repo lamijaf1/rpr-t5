@@ -12,8 +12,8 @@ public class Controller {
     boolean decimalni = false;
     int cifra;
     double broj1;
-    int intVr = 0;
-    double doubleVr = 0;
+    private int intVr = 0;
+    private double doubleVr = 0;
     String trenutniBroj = "";
     public Label display;
     boolean kucano = false;
@@ -30,6 +30,9 @@ public class Controller {
     public Button btn9;
     public Button dotBtn;
     public Button plusBtn;
+    public Button equalsBtn;
+    private String prviBroj="";
+    private String drugiBroj="";
 
     public Controller() {
         tekst = new SimpleStringProperty("0");
@@ -58,12 +61,22 @@ public class Controller {
     public void eightClick(ActionEvent actionEvent) { DodajCifru(8); }
     public void nineClick(ActionEvent actionEvent) { DodajCifru(9);}
     public void dotBtn(ActionEvent actionEvent) {
-        if(decimalni==false)tekst.set(dotBtn.getText());
+        if(decimalni==false)tekst.set(tekst.get()+dotBtn.getText());
         decimalni=true;
     }
     public void PlusBtn(ActionEvent actionEvent) {
-        if(decimalni==false)tekst.set(dotBtn.getText());
-        decimalni=true;
+        prviBroj=tekst.get();
+        tekst.set("");
+    }
+    public void EqualsBtn(ActionEvent actionEvent) {
+        drugiBroj=tekst.get();
+        double br1=Double.parseDouble(prviBroj);
+        //System.out.println(prviBroj+ drugiBroj);
+        double br2=Double.parseDouble((drugiBroj));
+        //double jednako= br1+br2;
+        String broj=Double.toString(br1+br2);
+        //equalsBtn.setText(broj);
+        tekst.set(broj);
     }
 
     void DodajCifru(int broj) {
