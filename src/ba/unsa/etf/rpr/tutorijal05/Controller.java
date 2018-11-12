@@ -9,15 +9,8 @@ import javafx.scene.control.Label;
 
 public class Controller {
 
-    boolean decimalni = false;
-    int cifra;
-    double broj1;
-    private int intVr = 0;
-    private double doubleVr = 0;
-    String trenutniBroj = "";
+    public boolean decimalni = false;
     public Label display;
-    boolean kucano = false;
-    private SimpleStringProperty tekst;
     public Button btn0;
     public Button btn1;
     public Button btn2;
@@ -34,6 +27,7 @@ public class Controller {
     public Button percentBtn;
     private String prviBroj="";
     private String drugiBroj="";
+    private SimpleStringProperty tekst;
 
     public Controller() {
         tekst = new SimpleStringProperty("0");
