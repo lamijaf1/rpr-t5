@@ -31,6 +31,7 @@ public class Controller {
     public Button dotBtn;
     public Button plusBtn;
     public Button equalsBtn;
+    public Button percentBtn;
     private String prviBroj="";
     private String drugiBroj="";
 
@@ -71,14 +72,21 @@ public class Controller {
     public void EqualsBtn(ActionEvent actionEvent) {
         drugiBroj=tekst.get();
         double br1=Double.parseDouble(prviBroj);
-        //System.out.println(prviBroj+ drugiBroj);
+        System.out.println(prviBroj+ drugiBroj);
         double br2=Double.parseDouble((drugiBroj));
-        //double jednako= br1+br2;
-        String broj=Double.toString(br1+br2);
-        //equalsBtn.setText(broj);
+        double jednako= br1+br2;
+        String broj=Double.toString(jednako);
+        equalsBtn.setText(broj);
         tekst.set(broj);
     }
-
+    public void percentBtn(ActionEvent actionEvent) {
+        String posto=tekst.get();
+        tekst.set(tekst.get()+percentBtn.getText());
+        double br1=Double.parseDouble(posto);
+        br1/=100;
+        posto=Double.toString(br1);
+        tekst.set(posto);
+    }
     void DodajCifru(int broj) {
         if (tekst.get().equals("0") && tekst.get().length() == 1) {
             if(broj==0)tekst.set(btn0.getText());

@@ -28,7 +28,7 @@
    </columnConstraints>
    <children>
 
-      <Button fx:id="procenatBtn" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="\%" GridPane.rowIndex="1" />
+      <Button fx:id="percentBtn" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="\%" onAction="#percentBtn" GridPane.rowIndex="1" />
       <Button fx:id="podjeljenoBt" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="/" GridPane.columnIndex="1" GridPane.rowIndex="1" />
       <Button fx:id="putaBtn" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="x" GridPane.columnIndex="2" GridPane.rowIndex="1" />
       <Button fx:id="minusBtn" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="39.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1" />
