@@ -23,6 +23,7 @@ public class Controller {
     public Button btn9;
     public Button dotBtn;
     public Button plusBtn;
+    public Button productBtn;
     public Button equalsBtn;
     public Button percentBtn;
     private String prviBroj="";
@@ -76,30 +77,34 @@ public class Controller {
         tekst.set("");
     }
     public void divideBtn(ActionEvent actionEvent) {
-        prviBroj=tekst.get();
+        divide=tekst.get();
         tekst.set("");
     }
     public void equalsBtn(ActionEvent actionEvent) {
         drugiBroj=tekst.get();
-        //String drugiBroj = drugiBroj.substring(0, drugiBroj.length()-1);
-        double br1=Double.parseDouble(prviBroj);
-        System.out.println(prviBroj+ drugiBroj);
+        String broj="";
         double br2=Double.parseDouble((drugiBroj));
-        double jednako= br1+br2;
-        String broj=Double.toString(jednako);
-        equalsBtn.setText(broj);
-        tekst.set(broj);
-        /*  drugiBroj=tekst.get();
-        String broj=""
-        if(prviBroj.charAt(prviBroj.length()-1)=='+') {
-            prviBroj = prviBroj.substring(0, prviBroj.length() - 1);
+        if(prviBroj!="") {
             double br1 = Double.parseDouble(prviBroj);
-            double br2 = Double.parseDouble((drugiBroj));
             double jednako = br1 + br2;
             broj = Double.toString(jednako);
         }
-        equalsBtn.setText(broj);
-        tekst.set(broj);*/
+        if(minus!="") {
+            double br1 = Double.parseDouble(minus);
+            double jednako = br1 - br2;
+            broj = Double.toString(jednako);
+        }
+        if(product!="") {
+            double br1 = Double.parseDouble(product);
+            double jednako = br1*br2;
+            broj = Double.toString(jednako);
+        }
+        if(divide!="") {
+            double br1 = Double.parseDouble(divide);
+            double jednako = br1/br2;
+            broj = Double.toString(jednako);
+        }
+        tekst.set(broj);
     }
     public void percentBtn(ActionEvent actionEvent) {
         String posto=tekst.get();
