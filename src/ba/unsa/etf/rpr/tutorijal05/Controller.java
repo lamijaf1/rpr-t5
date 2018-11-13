@@ -27,6 +27,9 @@ public class Controller {
     public Button percentBtn;
     private String prviBroj="";
     private String drugiBroj="";
+    private String minus="";
+    private String product="";
+    private  String divide="";
     private SimpleStringProperty tekst;
 
     public Controller() {
@@ -65,11 +68,11 @@ public class Controller {
         tekst.set("");
     }
     public void minusBtn(ActionEvent actionEvent) {
-        prviBroj=tekst.get();
+        minus=tekst.get();
         tekst.set("");
     }
     public void productBtn(ActionEvent actionEvent) {
-        prviBroj=tekst.get();
+        product=tekst.get();
         tekst.set("");
     }
     public void divideBtn(ActionEvent actionEvent) {
