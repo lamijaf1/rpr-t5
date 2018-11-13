@@ -10,6 +10,7 @@ import javafx.scene.control.Label;
 public class Controller {
 
     public boolean decimalni = false;
+    private boolean jednako=false;
     public Label display;
     public Button btn0;
     public Button btn1;
@@ -61,6 +62,7 @@ public class Controller {
     public void nineClick(ActionEvent actionEvent) { DodajCifru(9);}
     public void dotBtn(ActionEvent actionEvent) {
         if(decimalni==false)tekst.set(tekst.get()+dotBtn.getText());
+       // if(tekst.get()==".")tekst.set("0.");
         decimalni=true;
     }
     public void plusBtn(ActionEvent actionEvent) {

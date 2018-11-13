@@ -73,6 +73,50 @@ class MainTest {
         assertEquals("654", display.getText());
     }
     @Test
+    public void multifunction (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#btn9");
+        robot.clickOn("#plusBtn");
+        robot.clickOn("#btn7");
+        robot.clickOn("#equalsBtn");
+        robot.clickOn("#minusBtn");
+        robot.clickOn("#btn6");
+        robot.clickOn("#equalsBtn");
+        robot.clickOn("#productBtn");
+        robot.clickOn("#btn5");
+        robot.clickOn("#equalsBtn");
+        assertEquals("50.0", display.getText());
+    }
+    @Test
+    public void procent (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#btn9");
+        robot.clickOn("#btn8");
+        robot.clickOn("#percentBtn");
+        assertEquals("0.98", display.getText());
+    }
+    @Test
+    public void number7Minus654 (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#btn7");
+        robot.clickOn("#minusBtn");
+        robot.clickOn("#btn6");
+        robot.clickOn("#btn5");
+        robot.clickOn("#btn4");
+        robot.clickOn("#equalsBtn");
+        assertEquals("-647.0", display.getText());
+    }
+    @Test
+    public void Minus654 (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#minusBtn");
+        robot.clickOn("#btn6");
+        robot.clickOn("#btn5");
+        robot.clickOn("#btn4");
+        robot.clickOn("#equalsBtn");
+        assertEquals("-654.0", display.getText());
+    }
+    @Test
     public void number111Product1010 (FxRobot robot) {
         display = robot.lookup("#display").queryAs(Label.class);
         robot.clickOn("#btn1");
@@ -126,6 +170,27 @@ class MainTest {
         display = robot.lookup("#display").queryAs(Label.class);
         robot.clickOn("#btn8");
         robot.clickOn("#btn8");
+        robot.clickOn("#dotBtn");
+        robot.clickOn("#btn8");
+        robot.clickOn("#btn8");
+        robot.clickOn("#plusBtn");
+        robot.clickOn("#btn1");
+        robot.clickOn("#equalsBtn");
+        assertEquals("89.88", display.getText());
+    }
+    @Test
+    public void dotBtnFirst(FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#dotBtn");
+        robot.clickOn("#btn1");
+        assertEquals("0.1", display.getText());
+    }
+    @Test
+    public void dotBtn2x (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#btn8");
+        robot.clickOn("#btn8");
+        robot.clickOn("#dotBtn");
         robot.clickOn("#dotBtn");
         robot.clickOn("#btn8");
         robot.clickOn("#btn8");
