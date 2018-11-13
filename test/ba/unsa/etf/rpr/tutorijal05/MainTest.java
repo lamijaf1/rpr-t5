@@ -60,6 +60,52 @@ class MainTest {
         robot.clickOn("#btn6");
         assertEquals("456", display.getText());
     }
+    @Test
+    public void number987Minus654 (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#btn9");
+        robot.clickOn("#btn8");
+        robot.clickOn("#btn7");
+        robot.clickOn("#minusBtn");
+        robot.clickOn("#btn6");
+        robot.clickOn("#btn5");
+        robot.clickOn("#btn4");
+        assertEquals("654", display.getText());
+    }
+    @Test
+    public void number111Product1010 (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#btn1");
+        robot.clickOn("#btn1");
+        robot.clickOn("#btn1");
+        robot.clickOn("#productBtn");
+        robot.clickOn("#btn1");
+        robot.clickOn("#btn0");
+        robot.clickOn("#btn1");
+        robot.clickOn("#btn0");
+        assertEquals("1010", display.getText());
+    }
+    @Test
+    public void number111Dividet0 (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#btn1");
+        robot.clickOn("#btn1");
+        robot.clickOn("#btn1");
+        robot.clickOn("#divideBtn");
+        robot.clickOn("#btn0");
+        robot.clickOn("#equalsBtn");
+        assertEquals("Nije dozvoljeno", display.getText());
+    }
+    @Test
+    public void number0Divide123 (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#btn0");
+        robot.clickOn("#divideBtn");
+        robot.clickOn("#btn1");
+        robot.clickOn("#btn2");
+        robot.clickOn("#btn3");
+        assertEquals("123", display.getText());
+    }
 
     @Test
     public void number123Plus456Equals (FxRobot robot) {

@@ -81,6 +81,7 @@ public class Controller {
         tekst.set("");
     }
     public void equalsBtn(ActionEvent actionEvent) {
+        decimalni=false;
         drugiBroj=tekst.get();
         String broj="";
         double br2=Double.parseDouble((drugiBroj));
@@ -103,6 +104,8 @@ public class Controller {
             double br1 = Double.parseDouble(divide);
             double jednako = br1/br2;
             broj = Double.toString(jednako);
+            if(br2==0 || Math.abs(br2-0)<0.001) broj="Nije dozvoljeno";
+
         }
         tekst.set(broj);
     }

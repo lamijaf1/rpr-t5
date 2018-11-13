@@ -30,7 +30,7 @@
    <children>
 
        <Button fx:id="percentBtn" maxWidth="Infinity" mnemonicParsing="false" onAction="#percentBtn" prefHeight="30.0" prefWidth="40.0" text="\%" GridPane.rowIndex="1" />
-       <Button fx:id="podjeljenoBt" maxWidth="Infinity" mnemonicParsing="false" onAction="#divideBtn" prefHeight="30.0" prefWidth="40.0" text="/" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+       <Button fx:id="divideBtn" maxWidth="Infinity" mnemonicParsing="false" onAction="#divideBtn" prefHeight="30.0" prefWidth="40.0" text="/" GridPane.columnIndex="1" GridPane.rowIndex="1" />
        <Button fx:id="productBtn" maxWidth="Infinity" mnemonicParsing="false" onAction="#productBtn" prefHeight="30.0" prefWidth="40.0" text="x" GridPane.columnIndex="2" GridPane.rowIndex="1" />
        <Button fx:id="minusBtn" alignment="CENTER" maxWidth="Infinity" mnemonicParsing="false" onAction="#minusBtn" prefHeight="30.0" prefWidth="39.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1" />
        <Button fx:id="btn7" maxWidth="Infinity" mnemonicParsing="false" onAction="#sevenClick" prefHeight="30.0" prefWidth="40.0" text="7" GridPane.rowIndex="2" />
